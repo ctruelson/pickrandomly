@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     resources :items
   end
 
+  get '/number/upto/:max' => 'numbers#upto'
+  get '/number/between/:min/:max' => 'numbers#between'
+
   get ':group_slug/into/:numparts' => 'groups#subsets'
   get ':group_slug' => 'groups#show'
 
